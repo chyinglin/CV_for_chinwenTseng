@@ -1,0 +1,145 @@
+\documentclass[a4paper,pt]{article}
+
+%A Few Useful Packages
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=5mm,
+ top=1mm,
+ vmargin=0.1in,
+ }
+
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+\usepackage{enumerate}
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%\addtolength{\voffset}{-1.3cm}
+
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{10mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.2\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+
+\begin{document}
+
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Chin-Wen \textsc{Tseng}}
+		\\ {\small +886 972881018  \href{mailto:aammyytseng@gmail.com}{aammyytseng@gmail.com}} \\&
+		\href{https://tw.linkedin.com/in/chin-wen-tseng-b8696579
+}{https://tw.linkedin.com/in/chin-wen-tseng-b8696579} \\& ISTQB® Certified Tester 
+		\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Qualification
+\section{Qualification}
+
+\begin{tabular}{rl}	
+ & -- 5  years  experience in Software Development, test infrastructure design and automation\\
+  & -- 2  years  experience in leading Software Quality Assurance\\
+ & -- Experience in programming C/C++, Python and Node.js \\
+ & --  Experience with Unix/Linux systems with scripting experience in Shell and Python
+ \\& -- Experience in testing tool design and troubleshooting with web and mobile software
+\end{tabular}
+%Section: Work Experience at the top
+\section{Work Experience}
+\begin{itemize}
+\begin{tabular}{lp{10cm}p{10cm}p{1cm}}
+\textbf{2019/08-Current}&\textbf {Solutions Architect at Oriente}\\
+&\item\textsc{Automation in test and report infrastructure}\\&\footnotesize{\qquad Lead local QA team in automation QA infrastructure of Cashalo app}\item\textsc{CRM chatbot}\\&
+\footnotesize{\qquad Lead and design Customer Relationship Management project with finite-state machine system architecture using Node.js in severless framework}\\
+\textbf{2018/06-2019/08}&\textbf {Lead Software Engineer in Test at Oriente}\\
+&\item\textsc{Web and Apps Testing Automation Architecture}\\&
+\footnotesize{\qquad Design and implement testing automation architecture base on AWS, auto-testing and deploy framework written in robot framework, selenium and Python with API-testing, functional testing, UAT testing}\\
+&\item\textsc{Lead automation testing team}\\&
+\footnotesize{\qquad Build an automation SDET team. Including training team members with morden testing architecture and code review. Help establish auto-team and transfer manual QA to SDET}\\
+\textbf{2016/09-2018/05}&\textbf {Software Engineer in Test at Positive Grid}\\
+&\item\textsc{Digital Amp Hardware Simulator and Test Harness}\\&
+\footnotesize{\qquad A simulator for the company product (Digital Amp), which can be use as a test harness for automation test and also as a development tool}\\
+&\item\textsc{Preset Format Verification Framework}\\&
+\footnotesize{\qquad A framework for converting and validating a BIAS Amp preset, which allows a shared configuration to be used across app, firmware and server}\\
+
+
+\textbf{2016/03-2016/09}&\textbf {Algorism Software Engineer at Cheetah Mobile}
+\\&\item\textsc{ECPM explore optimization for New Ads}\\
+
+\textbf{2015/02-2016/03}&\textbf {Embedded System Software Engineer at VIVOTEK, INC}
+ \\&\item\textsc{Network Video Recorder Server Backup Error Reasons Phrase}
+ \\&\item\textsc{Design Network Video Recorder Server Event Recording}
+ \\&\item\textsc{Design Network Video Recorder Server UAT system}\\&\footnotesize{\qquad Design and implement UAT system for VIVO surveillance products}
+\end{tabular}
+%Section: Education
+\section{Education}
+\begin{tabular}{rl}	
+\textsc{Feb} 2015& Master of Science in Bioinformatics, \textbf{National Chiao Tung University} \\
+\textsc{Feb} 2013& Bachelor of Electrical Engineering, \textbf{National Cheng Kung University}
+\end{tabular}
+
+%Section: Programing Skills
+\section{Programing Skills}
+\begin{tabular}{rl}
+ \textsc{Languages:}&C++, C, Python, Shell Scripts, Node.js, HTML/CSS\\
+\textsc{Tools:}&AWS,Docker, Kubernets, Git, Jenkins, Gerrit, Selenium, Robot frameworks, Charles\\
+\end{tabular}
+
+%Section: Publication
+\section{Publication}
+ \textbf{BMC Bioinformatics 2015, 16(Suppl 1):S2 }| \small{doi:10.1186/1471-2105-16-S1-S2}, \\
+ \emph{PEAT: an intelligent and efficient paired-end sequencing adapter trimming algorithm.}
+ 
+
+\end{itemize}
+\end{document}
+
